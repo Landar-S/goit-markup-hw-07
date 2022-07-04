@@ -10,18 +10,13 @@
     margin-left: 30px;
   }
   &__link {
-    display: flex;
-    align-items: center;
+    @include centered(flex, center, null);
     padding-top: 32px;
     padding-bottom: 32px;
 
-    transition: color 250ms var(--function-cubic);
+    @include transition(color, null, null, 250ms, var(--function-cubic));
 
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    color: var(--secondary-text-color);
+    @include text(null, 500, 14px, 16px, 0.02em, var(--secondary-text-color));
     &:hover,
     &:focus {
       color: var(--accent-color);

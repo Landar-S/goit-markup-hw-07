@@ -17,11 +17,7 @@
     margin-left: auto;
     margin-right: auto;
 
-    color: var(--title-color);
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
-    letter-spacing: 0.06em;
+    @include text(null, 900, 44px, 60px, 0.06em, var(--title-color));
     text-transform: uppercase;
   }
 }

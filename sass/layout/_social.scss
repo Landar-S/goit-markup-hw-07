@@ -2,12 +2,9 @@
   margin-left: 70px;
   &__title {
     margin-bottom: 20px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
+
+    @include text(null, 700, 14px, 16px, 00.03em, var(--title-color));
     text-transform: uppercase;
-    color: var(--title-color);
   }
   &__list {
     display: flex;
@@ -21,12 +18,11 @@
     }
   }
   &__link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include centered(flex, center, center);
     width: 100%;
     height: 100%;
-    transition: background-color 250ms var(--function-cubic);
+
+    @include transition(background-color, null, null, 250ms, var(--function-cubic));
 
     background-color: rgba(255, 255, 255, 0.1);
     color: var(--title-color);

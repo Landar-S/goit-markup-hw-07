@@ -2,8 +2,8 @@
   padding-top: 94px;
   padding-bottom: 94px;
   &__list {
-    display: flex;
-    justify-content: center;
+    @include centered(flex, null, center);
+
     margin-bottom: 50px;
   }
   &__item:not(:last-child) {
@@ -12,11 +12,7 @@
   &__btn {
     padding: 6px 22px;
 
-    font-family: inherit;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.62;
-    letter-spacing: 0.03em;
+    @include text(inherit, 500, 16px, 26px, 0.03em, null);
 
     border: 0;
     border-radius: 4px;
@@ -27,8 +23,7 @@
         0px 2px 2px rgba(0, 0, 0, 0.12);
     }
     &-no-active {
-      transition: background-color 250ms var(--function-cubic), color 250ms var(--function-cubic),
-        box-shadow 250ms var(--function-cubic);
+      @include transition(background-color, color, box-shadow, 250ms, var(--function-cubic));
 
       background-color: #f5f4fa;
       &:hover,

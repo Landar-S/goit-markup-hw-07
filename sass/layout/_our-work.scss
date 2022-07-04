@@ -5,9 +5,7 @@
     margin-left: auto;
     margin-right: auto;
 
-    font-size: 36px;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
+    @include text(null, null, 36px, 42px, 0.03em, null);
     text-align: center;
   }
   &__list {
@@ -25,20 +23,15 @@
   }
   &__sub-title {
     position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include centered(flex, center, center);
     width: 100%;
     height: 70px;
     bottom: 0;
     left: 0;
 
-    font-size: 14px;
-    line-height: 1.14;
+    @include text(null, null, 14px, 16px, 0.03em, var(--title-color));
     text-align: center;
-    letter-spacing: 0.03em;
     text-transform: uppercase;
     background-color: rgba(47, 48, 58, 0.8);
-    color: var(--title-color);
   }
 }

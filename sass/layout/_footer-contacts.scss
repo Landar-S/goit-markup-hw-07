@@ -13,11 +13,9 @@
 }
 
 .contacts__label {
-  transition: color 250ms var(--function-cubic);
+  @include transition(color, null, null, 250ms, var(--function-cubic));
 
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
+  @include text(null, null, 14px, 24px, 0.03em, null);
   &:hover,
   &:focus {
     color: var(--accent-color);

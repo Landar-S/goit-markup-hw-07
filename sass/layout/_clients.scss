@@ -20,12 +20,10 @@
     }
   }
   &__link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include centered(flex, center, center);
     width: 100%;
     height: 100%;
-    transition: color 250ms var(--function-cubic), border 250ms var(--function-cubic);
+    @include transition(color, border, null, 250ms, var(--function-cubic));
 
     outline: transparent;
     color: var(--logo-color);

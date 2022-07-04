@@ -9,9 +9,7 @@
     margin-right: auto;
     margin-bottom: 50px;
 
-    font-size: 36px;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
+    @include text(null, null, 36px, 42px, 0.03em, null);
   }
   &__list {
     display: flex;
@@ -35,18 +33,12 @@
   &__name {
     margin-bottom: 10px;
 
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.19;
-    letter-spacing: 0.03em;
+    @include text(null, 500, 16px, 19px, 0.03em, null);
   }
   &__specialty {
     margin-bottom: 16px;
 
-    color: var(--secondary-text-color);
-    font-size: 16px;
-    line-height: 1.19;
-    letter-spacing: 0.03em;
+    @include text(null, null, 16px, 19px, 0.03em, var(--secondary-text-color));
   }
   &__wrap {
     padding: 30px 32px;
@@ -55,8 +47,7 @@
 
 .team-soc {
   &__list {
-    display: flex;
-    justify-content: center;
+    @include centered(flex, null, center);
   }
   &__item {
     width: 44px;
@@ -67,12 +58,11 @@
     }
   }
   &__link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include centered(flex, center, center);
     width: 100%;
     height: 100%;
-    transition: background-color 250ms var(--function-cubic), color 250ms var(--function-cubic);
+
+    @include transition(background-color, color, null, 250ms, var(--function-cubic));
 
     background-color: var(--bg-color);
     color: var(--logo-color);

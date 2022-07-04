@@ -1,18 +1,11 @@
 .main-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include centered(flex, center, center);
   min-width: 200px;
   height: 50px;
 
-  transition: background-color 250ms var(--function-cubic);
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
+  @include transition(background-color, null, null, 250ms, var(--function-cubic));
+  @include text(inherit, 700, 16px, 30px, 0.06em, var(--title-color));
   text-align: center;
-  color: var(--title-color);
 
   background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);

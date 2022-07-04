@@ -16,7 +16,8 @@
   }
   &__link {
     display: block;
-    transition: box-shadow 250ms var(--function-cubic);
+
+    @include transition(box-shadow, null, null, 250ms, var(--function-cubic));
     outline: transparent;
     &:hover,
     &:focus {
@@ -40,7 +41,7 @@
     height: 100%;
 
     transform: translateY(100%);
-    transition: opacity 250ms var(--function-cubic), transform 250ms var(--function-cubic);
+    @include transition(opacity, transform, null, 250ms, var(--function-cubic));
     background-color: rgba(33, 150, 243, 0.9);
     opacity: 0;
   }
@@ -49,12 +50,9 @@
     top: 0;
     left: 0;
     padding: 63px 24px;
-    transition: opacity 250ms var(--function-cubic);
 
-    font-size: 18px;
-    line-height: 1.56;
-    letter-spacing: 0.03em;
-    color: var(--title-color);
+    @include transition(opacity, null, null, 250ms, var(--function-cubic));
+    @include text(null, null, 18px, 28px, 0.03em, var(--title-color));
     overflow: auto;
   }
   &__wrap {
@@ -65,16 +63,10 @@
   &__title {
     margin-bottom: 4px;
 
-    color: var(--primary-text-color);
-    font-size: 18px;
-    line-height: 2;
-    letter-spacing: 0.06em;
+    @include text(null, null, 18px, 36px, 0.06em, var(--primary-text-color));
   }
   &__text {
-    color: var(--secondary-text-color);
-    font-size: 16px;
-    line-height: 1.88;
-    letter-spacing: 0.03em;
+    @include text(null, null, 16px, 30px, 0.03em, var(--secondary-text-color));
   }
 }
 

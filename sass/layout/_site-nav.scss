@@ -10,13 +10,8 @@
     padding-top: 32px;
     padding-bottom: 32px;
 
-    transition: color 250ms var(--function-cubic);
-
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    color: var(--primary-tex-color);
+    @include transition(color, null, null, 250ms, var(--function-cubic));
+    @include text(null, 500, 14px, 16px, 0.02em, var(--primary-tex-color));
     &:hover,
     &:focus {
       color: var(--accent-color);
