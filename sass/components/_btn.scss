@@ -1,12 +1,9 @@
-.hero-btn,
-.subscribe-btn,
-.send-btn {
+.main-btn {
   display: flex;
   align-items: center;
   justify-content: center;
   min-width: 200px;
   height: 50px;
-  margin: 0 auto;
 
   transition: background-color 250ms var(--function-cubic);
   font-family: inherit;
@@ -15,20 +12,30 @@
   line-height: 1.88;
   letter-spacing: 0.06em;
   text-align: center;
-
   color: var(--title-color);
+
   background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border: 0;
   border-radius: 4px;
   border-color: transparent;
+  &:hover,
+  &:focus {
+    background-color: var(--secondary-bgc-btn);
+  }
 }
 
-.hero-btn:hover,
-.hero-btn:focus,
-.subscribe-btn:hover,
-.subscribe-btn:focus,
-.send-btn:hover,
-.send-btn:focus {
-  background-color: var(--secondary-bgc-btn);
+.hero__btn {
+  margin: 0 auto;
+}
+
+.subscribe-btn {
+  margin-left: 12px;
+  &__icon {
+    margin-left: 10px;
+  }
+}
+
+.send-btn {
+  margin: 30px auto 0 auto;
 }
